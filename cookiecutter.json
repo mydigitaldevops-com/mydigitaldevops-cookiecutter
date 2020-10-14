@@ -3,7 +3,7 @@
     "full_name": "Nicolas Ahouandjinou",
     "project_name": "myDigitalDevOps",
     "project_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_')|replace('.', '_')|trim() }}",
-    "project_short_description": "myDigitalDevops Boilerplate contains all you need to create awesome projects.",
+    "project_short_description": "myDigitalDevops cookiecutter contains all you need to create awesome projects.",
     "domain_name": "example.com",
     "email": "{{ cookiecutter.author_name.lower()|replace(' ', '-') }}@example.com",
     "github_username": "nicodevops",
