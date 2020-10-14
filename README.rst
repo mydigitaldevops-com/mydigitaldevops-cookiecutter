@@ -1,7 +1,7 @@
 myDigitalDevops Cookiecutter
-======================
+============================
 
-Powered by Cookiecutter_. 
+Powered by Cookiecutter.
 A sweet command-line utility tool that generate projects from templates for developing, shipping
 and maintaining software with ease.
 
