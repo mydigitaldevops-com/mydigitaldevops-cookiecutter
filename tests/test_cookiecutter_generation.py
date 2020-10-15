@@ -189,7 +189,7 @@ def test_travis_invokes_pytest(cookies, context, use_docker, expected_test_scrip
     assert result.project.basename == context["project_slug"]
     assert result.project.isdir()
 
-    with open(f"{result.project}/.travis.yml", "r") as travis_yml:
+    with open(f"{result.project}/..travis.yml", "r") as travis_yml:
         try:
             yml = yaml.safe_load(travis_yml)["jobs"]["include"]
             assert yml[0]["script"] == ["flake8"]
