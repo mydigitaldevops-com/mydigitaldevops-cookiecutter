@@ -8,7 +8,6 @@ try:
 except ImportError:
     from distutils.core import setup
 
-# Our version ALWAYS matches the version of Django we support
 # If Django has a new release, we branch, tag, then update this setting after the tag.
 version = "3.0.10"
 
@@ -26,7 +25,7 @@ setup(
     description="A Cookiecutter starter for creating our production-ready Django-based platform. ",
     long_description=long_description,
     author="Nicolas Ahouandjinou",
-    author_email="mydigitaldevopss@gmail.com",
+    author_email="mydigitaldevops@gmail.com",
     url="https://github.com/mydigitaldevops-com/mydigitaldevops-cookiecutter",
     packages=[],
     license="BSD",
