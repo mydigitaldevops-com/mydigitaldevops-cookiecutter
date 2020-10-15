@@ -1,0 +1,3 @@
+# Needed by Heroku.
+
+-r config/requirements/prod.txt
