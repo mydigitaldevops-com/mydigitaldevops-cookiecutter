@@ -1,1 +1,17 @@
-SECRET_KEY = ')ujehffi9m(u%0^tzd8c639jyz2(#ub7*on15p+$#c0&x)gn)2'
+# General
+# ------------------------------------------------------------------------------
+USE_DOCKER=yes
+IPYTHONDIR=/app/.ipython
+
+{%- if cookiecutter.use_celery == 'y' %}
+# Redis
+# ------------------------------------------------------------------------------
+REDIS_URL=redis://redis:6379/0
+
+# Celery
+# ------------------------------------------------------------------------------
+CELERY_BROKER_URL=REDIS_URL
+# Flower
+CELERY_FLOWER_USER=!!!SET CELERY_FLOWER_USER!!!
+CELERY_FLOWER_PASSWORD=!!!SET CELERY_FLOWER_PASSWORD!!!
+{% endif %}
