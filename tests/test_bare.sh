@@ -10,7 +10,7 @@ set -o errexit
 pip install 'pip>=20.2'
 
 # install test requirements
-pip install -r requirements.txt
+pip install -r requirements_dev.txt
 
 # create a cache directory
 mkdir -p .cache/bare
