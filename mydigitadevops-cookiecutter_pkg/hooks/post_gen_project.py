@@ -159,10 +159,10 @@ def set_flag(file_path, flag, value=None, formatted=None, *args, **kwargs):
     if value is None:
         random_string = generate_random_string(*args, **kwargs)
         if random_string is None:
-            message = [
+            print(
                 "We couldn't find a secure pseudo-random number generator on your system. "
                 "Please, make sure to manually {} later.".format(flag)
-            ]
+            )
             random_string = flag
         if formatted is not None:
             random_string = formatted.format(random_string)
@@ -260,13 +260,9 @@ def set_flags_in_envs(postgres_user, celery_flower_user, debug=False):
     set_django_admin_url(prod_django_envs_path)
 
     set_postgres_user(dev_postgres_envs_path, value=postgres_user)
-    set_postgres_password(
-        dev_postgres_envs_path, value=DEBUG_VALUE if debug else None
-    )
+    set_postgres_password(dev_postgres_envs_path, value=DEBUG_VALUE if debug else None)
     set_postgres_user(prod_postgres_envs_path, value=postgres_user)
-    set_postgres_password(
-        prod_postgres_envs_path, value=DEBUG_VALUE if debug else None
-    )
+    set_postgres_password(prod_postgres_envs_path, value=DEBUG_VALUE if debug else None)
 
     set_celery_flower_user(dev_django_envs_path, value=celery_flower_user)
     set_celery_flower_password(
@@ -361,8 +357,8 @@ def main():
         if "{{ cookiecutter.keep_local_envs_in_vcs }}".lower() == "y":
             print(
                 INFO + ".env(s) are only utilized when Docker Compose and/or "
-                       "Heroku support is enabled so keeping them does not "
-                       "make sense given your current setup." + TERMINATOR
+                "Heroku support is enabled so keeping them does not "
+                "make sense given your current setup." + TERMINATOR
             )
         remove_envs_and_associated_files()
     else:
@@ -380,7 +376,7 @@ def main():
     if "{{ cookiecutter.cloud_provider}}".lower() == "none":
         print(
             WARNING + "You chose not to use a cloud provider, "
-                      "media files won't be served in production." + TERMINATOR
+            "media files won't be served in production." + TERMINATOR
         )
         remove_storages_module()
 
