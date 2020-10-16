@@ -159,10 +159,10 @@ def set_flag(file_path, flag, value=None, formatted=None, *args, **kwargs):
     if value is None:
         random_string = generate_random_string(*args, **kwargs)
         if random_string is None:
-            print(
+            message = [
                 "We couldn't find a secure pseudo-random number generator on your system. "
                 "Please, make sure to manually {} later.".format(flag)
-            )
+            ]
             random_string = flag
         if formatted is not None:
             random_string = formatted.format(random_string)
@@ -251,30 +251,26 @@ def append_to_gitignore_file(s):
 
 
 def set_flags_in_envs(postgres_user, celery_flower_user, debug=False):
-    local_django_envs_path = os.path.join(".envs", ".dev", ".django")
-    production_django_envs_path = os.path.join(".envs", ".prod", ".django")
-    local_postgres_envs_path = os.path.join(".envs", ".dev", ".postgres")
-    production_postgres_envs_path = os.path.join(".envs", ".prod", ".postgres")
+    dev_django_envs_path = os.path.join(".envs", ".dev", ".django")
+    prod_django_envs_path = os.path.join(".envs", ".prod", ".django")
+    dev_postgres_envs_path = os.path.join(".envs", ".dev", ".postgres")
+    prod_postgres_envs_path = os.path.join(".envs", ".prod", ".postgres")
 
-    set_django_secret_key(production_django_envs_path)
-    set_django_admin_url(production_django_envs_path)
+    set_django_secret_key(prod_django_envs_path)
+    set_django_admin_url(prod_django_envs_path)
 
-    set_postgres_user(local_postgres_envs_path, value=postgres_user)
-    set_postgres_password(
-        local_postgres_envs_path, value=DEBUG_VALUE if debug else None
-    )
-    set_postgres_user(production_postgres_envs_path, value=postgres_user)
-    set_postgres_password(
-        production_postgres_envs_path, value=DEBUG_VALUE if debug else None
-    )
+    set_postgres_user(dev_postgres_envs_path, value=postgres_user)
+    set_postgres_password(dev_postgres_envs_path, value=DEBUG_VALUE if debug else None)
+    set_postgres_user(prod_postgres_envs_path, value=postgres_user)
+    set_postgres_password(prod_postgres_envs_path, value=DEBUG_VALUE if debug else None)
 
-    set_celery_flower_user(local_django_envs_path, value=celery_flower_user)
+    set_celery_flower_user(dev_django_envs_path, value=celery_flower_user)
     set_celery_flower_password(
-        local_django_envs_path, value=DEBUG_VALUE if debug else None
+        dev_django_envs_path, value=DEBUG_VALUE if debug else None
     )
-    set_celery_flower_user(production_django_envs_path, value=celery_flower_user)
+    set_celery_flower_user(prod_django_envs_path, value=celery_flower_user)
     set_celery_flower_password(
-        production_django_envs_path, value=DEBUG_VALUE if debug else None
+        prod_django_envs_path, value=DEBUG_VALUE if debug else None
     )
 
 

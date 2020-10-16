@@ -2,10 +2,10 @@ import os
 import re
 
 import pytest
-from cookiecutter.exceptions import FailedHookException
 import sh
 import yaml
 from binaryornot.check import is_binary
+from cookiecutter.exceptions import FailedHookException
 
 PATTERN = r"{{(\s?cookiecutter)[.](.*?)}}"
 RE_OBJ = re.compile(PATTERN)
@@ -88,8 +88,6 @@ SUPPORTED_COMBINATIONS = [
 
 UNSUPPORTED_COMBINATIONS = [
     {"cloud_provider": "None", "use_whitenoise": "n"},
-    {"cloud_provider": "GCP", "mail_service": "Amazon SES"},
-    {"cloud_provider": "None", "mail_service": "Amazon SES"},
 ]
 
 
@@ -173,7 +171,7 @@ def test_travis_invokes_pytest(cookies, context, use_docker, expected_test_scrip
     assert result.project.basename == context["project_slug"]
     assert result.project.isdir()
 
-    with open(f"{result.project}/..travis.yml", "r") as travis_yml:
+    with open(f"{result.project}/.travis.yml", "r") as travis_yml:
         try:
             yml = yaml.safe_load(travis_yml)["jobs"]["include"]
             assert yml[0]["script"] == ["flake8"]
