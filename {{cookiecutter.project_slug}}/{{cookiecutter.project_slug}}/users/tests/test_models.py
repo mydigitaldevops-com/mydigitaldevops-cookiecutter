@@ -1,4 +1,5 @@
 import pytest
+
 from {{cookiecutter.project_slug}}.users.models import User
 
 pytestmark = pytest.mark.django_db

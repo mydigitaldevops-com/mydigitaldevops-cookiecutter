@@ -22,7 +22,7 @@
     "use_pycharm": "n",
     "use_windows": "n",
     "use_docker": "y",
-    "use_pytest": "y",
+    "use_pytest": "n",
     "js_task_runner": [
         "None",
         "Gulp"
@@ -36,7 +36,7 @@
   ],
     "use_async": "n",
     "use_celery": "n",
-    "use_drf": "n",
+    "use_drf": "y",
     "custom_bootstrap_compilation": "y",
     "use_compressor": "y",
     "cloud_provider": [

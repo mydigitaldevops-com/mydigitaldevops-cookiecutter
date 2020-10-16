@@ -2,11 +2,14 @@ import pytest
 from django.contrib.auth.models import AnonymousUser
 from django.http.response import Http404
 from django.test import RequestFactory
+
 from {{cookiecutter.project_slug}}.users.models import User
 from {{cookiecutter.project_slug}}.users.tests.factories import UserFactory
-from {{cookiecutter.project_slug}}.users.views import (UserRedirectView,
-                                                       UserUpdateView,
-                                                       user_detail_view)
+from {{cookiecutter.project_slug}}.users.views import (
+    UserRedirectView,
+    UserUpdateView,
+    user_detail_view,
+)
 
 pytestmark = pytest.mark.django_db
 
