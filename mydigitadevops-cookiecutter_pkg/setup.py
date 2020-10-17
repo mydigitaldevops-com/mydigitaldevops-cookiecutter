@@ -13,8 +13,8 @@ with open("README.rst", "r") as readme_file:
 
 setup(
     name="mydigitaldevops-cookiecutter",
-    version="1.0.1",
-    description="A sweet command-line tool that generates a robust development/production Django-based environment. ",
+    version="1.0.dev1",
+    description="A sweet command-line tool that generates robust development/production Django-based environments. ",
     long_description=long_description,
     author="Nicolas Ahouandjinou",
     author_email="nico@mydigitaldevops.com",
