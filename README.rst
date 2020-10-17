@@ -9,9 +9,6 @@ myDigitalDevops Cookiecutter
      :target: https://github.com/ambv/black
      :alt: Black code styl
 
-.. image:: https://codecov.io/gh/mydigitaldevops-com/mydigitaldevops-cookiecutter/branch/main/graph/badge.svg?token=ML5LCSP4HX
-    :target: https://codecov.io/gh/mydigitaldevops-com/mydigitaldevops-cookiecutter
-
 Powered by Cookiecutter.
 A sweet command-line utility tool that generate projects from templates for developing, shipping
 and maintaining software with ease.
