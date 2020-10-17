@@ -1,5 +1,6 @@
 import pytest
 from django.test import RequestFactory
+
 from {{cookiecutter.project_slug}}.users.api.views import UserViewSet
 from {{cookiecutter.project_slug}}.users.models import User
 

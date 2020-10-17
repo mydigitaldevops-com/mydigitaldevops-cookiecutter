@@ -159,10 +159,10 @@ def set_flag(file_path, flag, value=None, formatted=None, *args, **kwargs):
     if value is None:
         random_string = generate_random_string(*args, **kwargs)
         if random_string is None:
-            print(
+            message = [
                 "We couldn't find a secure pseudo-random number generator on your system. "
                 "Please, make sure to manually {} later.".format(flag)
-            )
+            ]
             random_string = flag
         if formatted is not None:
             random_string = formatted.format(random_string)

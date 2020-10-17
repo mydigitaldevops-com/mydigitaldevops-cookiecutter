@@ -9,7 +9,6 @@
     "email": "{{ cookiecutter.author_name.lower()|replace(' ', '-') }}@example.com",
     "github_username": "nicodevops",
     "version": "0.1.0",
-    "timezone": "UTC",
     "create_author_file": "n",
     "open_source_license": [
         "MIT license",
@@ -19,11 +18,15 @@
         "GNU General Public License v3",
         "Not open source"
     ],
+    "timezone": "UTC",
+    "use_pycharm": "n",
+    "use_windows": "n",
+    "use_docker": "y",
+    "use_pytest": "n",
     "js_task_runner": [
         "None",
         "Gulp"
   ],
-    "use_docker": "n",
     "postgresql_version": [
     "12.3",
     "11.8",
@@ -31,33 +34,30 @@
     "9.6",
     "9.5"
   ],
-    "use_windows": "n",
-    "use_pytest": "n",
     "use_async": "n",
-    "use_drf": "n",
-    "custom_bootstrap_compilation": "y",
-    "use_compressor": "n",
     "use_celery": "n",
-    "use_mailhog": "n",
-    "use_sentry": "n",
-    "use_whitenoise": "y",
-    "use_heroku": "n",
+    "use_drf": "y",
+    "custom_bootstrap_compilation": "y",
+    "use_compressor": "y",
     "cloud_provider": [
-        "None",
+        "GCP",
         "AWS",
-        "GCP"
+        "None"
     ],
+    "use_heroku": "n",
+    "use_whitenoise": "y",
     "mail_service": [
-    "Other SMTP",
-    "Mailgun",
-    "Mailjet"
+        "Other SMTP",
+        "Mailgun",
+        "Mailjet"
   ],
-  "ci_tool": [
-    "None",
-    "Travis",
-    "Gitlab"
+    "use_mailhog": "n",
+    "ci_tool": [
+        "None",
+        "Travis",
+        "Gitlab"
   ],
-  "keep_local_envs_in_vcs": "n",
-  "debug": "y",
-  "use_pycharm": "n"
+    "use_sentry": "n",
+    "keep_local_envs_in_vcs": "n",
+    "debug": "y"
 }

@@ -1,4 +1,5 @@
 import pytest
+
 from {{cookiecutter.project_slug}}.users.models import User
 from {{cookiecutter.project_slug}}.users.tests.factories import UserFactory
 

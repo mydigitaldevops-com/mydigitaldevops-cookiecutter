@@ -1,50 +1,44 @@
 #!/usr/bin/env python
 
-import os
-import sys
+import setuptools
 
 try:
     from setuptools import setup
 except ImportError:
     from distutils.core import setup
 
-# If Django has a new release, we branch, tag, then update this setting after the tag.
-version = "3.0.10"
 
-if sys.argv[-1] == "tag":
-    os.system(f'git tag -a {version} -m "version {version}"')
-    os.system("git push --tags")
-    sys.exit()
-
-with open("README.rst") as readme_file:
+with open("README.rst", "r") as readme_file:
     long_description = readme_file.read()
 
 setup(
     name="mydigitaldevops-cookiecutter",
-    version=version,
-    description="A Cookiecutter starter for creating our production-ready Django-based platform. ",
+    version="1.0.1",
+    description="A sweet command-line tool that generates a robust development/production Django-based environment. ",
     long_description=long_description,
     author="Nicolas Ahouandjinou",
-    author_email="mydigitaldevops@gmail.com",
+    author_email="nico@mydigitaldevops.com",
     url="https://github.com/mydigitaldevops-com/mydigitaldevops-cookiecutter",
-    packages=[],
-    license="BSD",
+    packages=setuptools.find_packages(),
+    license="GPLv3",
     zip_safe=False,
     classifiers=[
+        "Topic :: Software Development",
+        "Intended Audience :: Developers",
         "Development Status :: 4 - Beta",
         "Environment :: Console",
-        "Framework :: Django :: 3.0",
-        "Intended Audience :: Developers",
         "Natural Language :: English",
-        "License :: OSI Approved :: BSD License",
-        "Programming Language :: Python",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: Implementation :: CPython",
-        "Topic :: Software Development",
+        "Framework :: Django :: 3.0",
+        "Operating System :: OS Independent",
+        ('License :: OSI Approved :: '
+         'GNU General Public License v3 or later (GPLv3+)'),
+
     ],
+    python_requires='>=3.7',
     keywords=(
-        "cookiecutter, starter, boilerplate, Python3, automation, django3 "
-        "skeleton, scaffolding, setup.py"
+        "Scaffold, Python3, Django3, flake8, pytest, code-black, coverage,"
+        "Build automation, Integrated tests"
     ),
 )

@@ -1,4 +1,4 @@
 # Change Log
-All enhancements and patches to Cookiecutter Django will be documented in this file.
+All enhancements and patches will be documented in this file.
 
 <!-- GENERATOR_PLACEHOLDER -->
