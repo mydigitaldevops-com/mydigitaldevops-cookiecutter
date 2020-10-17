@@ -1,5 +1,6 @@
 .idea/
 
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -26,6 +27,7 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+*_pkg/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
