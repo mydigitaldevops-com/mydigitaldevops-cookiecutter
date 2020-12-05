@@ -64,7 +64,7 @@ function styles() {
       cssnano({ preset: 'default' })   // minify result
   ]
 
-  return src(`${paths.sass}/project.scss`)
+  return src('${paths.sass}/project.scss')
     .pipe(sass({
       includePaths: [
         {% if cookiecutter.custom_bootstrap_compilation == 'y' %}
@@ -83,7 +83,7 @@ function styles() {
 
 // Javascript minification
 function scripts() {
-  return src(`${paths.js}/project.js`)
+  return src('${paths.js}/project.js')
     .pipe(plumber()) // Checks for errors
     .pipe(uglify()) // Minifies the js
     .pipe(rename({ suffix: '.min' }))
@@ -105,7 +105,7 @@ function vendorScripts() {
 
 // Image compression
 function imgCompression() {
-  return src(`${paths.images}/*`)
+  return src('${paths.images}/*')
     .pipe(imagemin()) // Compresses PNG, JPEG, GIF and SVG images
     .pipe(dest(paths.images))
 }
@@ -136,9 +136,9 @@ function runServer(cb) {
 function initBrowserSync() {
     browserSync.init(
       [
-        `${paths.css}/*.css`,
-        `${paths.js}/*.js`,
-        `${paths.templates}/*.html`
+        '${paths.css}/*.css',
+        '${paths.js}/*.js',
+        '${paths.templates}/*.html'
       ], {
         // https://www.browsersync.io/docs/options/#option-proxy
         {%- if cookiecutter.use_docker == 'n' %}
@@ -163,9 +163,9 @@ function initBrowserSync() {
 
 // Watch
 function watchPaths() {
-  watch(`${paths.sass}/*.scss`{% if cookiecutter.use_windows == 'y' %}, { usePolling: true }{% endif %}, styles)
-  watch(`${paths.templates}/**/*.html`{% if cookiecutter.use_windows == 'y' %}, { usePolling: true }{% endif %}).on("change", reload)
-  watch([`${paths.js}/*.js`, `!${paths.js}/*.min.js`]{% if cookiecutter.use_windows == 'y' %}, { usePolling: true }{% endif %}, scripts).on("change", reload)
+  watch('${paths.sass}/*.scss'{% if cookiecutter.use_windows == 'y' %}, { usePolling: true }{% endif %}, styles)
+  watch('${paths.templates}/**/*.html'{% if cookiecutter.use_windows == 'y' %}, { usePolling: true }{% endif %}).on("change", reload)
+  watch(['${paths.js}/*.js', '!${paths.js}/*.min.js']{% if cookiecutter.use_windows == 'y' %}, { usePolling: true }{% endif %}, scripts).on("change", reload)
 }
 
 // Generate all assets
