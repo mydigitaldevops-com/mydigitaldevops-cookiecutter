@@ -35,7 +35,7 @@ requirements:
       update: all
   - config/requirements/prod.txt:
       # update insecure only, pin all
-      update: insecure
+      update: all
       pin: True
 
 # add a label to pull requests, default is not set
