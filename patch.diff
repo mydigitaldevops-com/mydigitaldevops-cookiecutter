@@ -1,0 +1,25 @@
+From ef259295ca6e265f3403b0a56f960c700c86350b Mon Sep 17 00:00:00 2001
+From: pyup-bot <github-bot@pyup.io>
+Date: Mon, 14 Dec 2020 13:37:14 +0000
+Subject: [PATCH] Update pytest from 5.4.3 to 6.2.0
+
+---
+ {{cookiecutter.project_slug}}/config/requirements/dev.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/{{cookiecutter.project_slug}}/config/requirements/dev.txt b/{{cookiecutter.project_slug}}/config/requirements/dev.txt
+index dff5ce8..af32961 100644
+--- a/{{cookiecutter.project_slug}}/config/requirements/dev.txt
++++ b/{{cookiecutter.project_slug}}/config/requirements/dev.txt
+@@ -15,7 +15,7 @@ watchgod==0.6  # https://github.com/samuelcolvin/watchgod
+ # ------------------------------------------------------------------------------
+ mypy==0.770  # https://github.com/python/mypy
+ django-stubs==1.5.0  # https://github.com/typeddjango/django-stubs
+-pytest==5.4.3  # https://github.com/pytest-dev/pytest
++pytest==6.2.0  # https://github.com/pytest-dev/pytest
+ pytest-cookies==0.5.1
+ pytest-sugar==0.9.4  # https://github.com/Frozenball/pytest-sugar
+ 
+-- 
+2.27.0
+
