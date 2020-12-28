@@ -1,4 +1,4 @@
-pytz==2020.4  # https://github.com/stub42/pytz
+pytz==2020.5  # https://github.com/stub42/pytz
 python-slugify==4.0.1  # https://github.com/un33k/python-slugify
 Pillow==8.0.1  # https://github.com/python-pillow/Pillow
 {%- if cookiecutter.use_compressor == "y" %}
@@ -20,11 +20,11 @@ hiredis==1.1.0  # https://github.com/redis/hiredis-py
 celery==4.4.6  # pyup: < 5.0,!=4.4.7  # https://github.com/celery/celery
 django-celery-beat==2.1.0  # https://github.com/celery/django-celery-beat
 {%- if cookiecutter.use_docker == 'y' %}
-flower==0.9.5  # https://github.com/mher/flower
+flower==0.9.7  # https://github.com/mher/flower
 {%- endif %}
 {%- endif %}
 {%- if cookiecutter.use_async == 'y' %}
-uvicorn==0.13.1  # https://github.com/encode/uvicorn
+uvicorn==0.13.2  # https://github.com/encode/uvicorn
 {%- endif %}
 
 # Django
