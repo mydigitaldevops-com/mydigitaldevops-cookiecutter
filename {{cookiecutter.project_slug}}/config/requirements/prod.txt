@@ -26,5 +26,5 @@ django-anymail[mailgun]==8.2  # https://github.com/anymail/django-anymail
 {%- elif cookiecutter.mail_service == 'Mailjet' %}
 django-anymail[mailjet]==8.2  # https://github.com/anymail/django-anymail
 {%- elif cookiecutter.mail_service == 'Other SMTP' %}
-django-anymail==8.1  # https://github.com/anymail/django-anymail
+django-anymail==8.2  # https://github.com/anymail/django-anymail
 {%- endif %}
