@@ -13,7 +13,7 @@ jinja2-time==0.2.0
 lazy-object-proxy==1.6.0
 MarkupSafe==1.1.1
 mccabe==0.6.1
-more-itertools==8.6.0
+more-itertools==8.7.0
 packaging==20.8
 pluggy==0.13.1
 poyo==0.5.0
