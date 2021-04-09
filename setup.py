@@ -37,7 +37,7 @@ setup(
             "GNU General Public License v3 or later (GPLv3+)"
         ),
     ],
-    python_requires=">=3.7",
+    python_requires=">=3.8",
     keywords=(
         "Scaffold, Python3, Django3, flake8, pytest, code-black, coverage,"
         "Build automation, Integrated tests"
