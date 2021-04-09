@@ -5,9 +5,9 @@
 
 set -o errexit
 
-# Install modern pip to use new resolver:
-# https://blog.python.org/2020/07/upgrade-pip-20-2-changes-20-3.html
-pip install 'pip>=20.2'
+# Install modern pip with new resolver:
+# https://blog.python.org/2020/11/pip-20-3-release-new-resolver.html
+pip install 'pip>=20.3'
 
 # install test requirements
 pip install -r requirements_dev.txt
@@ -24,7 +24,7 @@ cd my_awesome_project
 sudo utility/install_os_dependencies.sh install
 
 # Install Python deps
-pip install --use-feature=2020-resolver -r config/requirements/dev.txt
+pip install -r config/requirements/dev.txt
 
 # run the project's tests
 pytest
