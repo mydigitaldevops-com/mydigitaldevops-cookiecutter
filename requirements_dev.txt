@@ -1,6 +1,6 @@
 arrow==1.1.0
 astroid==2.5.6
-attrs==20.3.0
+attrs==21.1.0
 binaryornot==0.4.4
 certifi==2020.12.5
 chardet==4.0.0
